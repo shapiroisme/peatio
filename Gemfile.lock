@@ -511,3 +511,6 @@ DEPENDENCIES
   uglifier
   unread!
   whenever (~> 0.9.2)
+
+BUNDLED WITH
+   1.10.2
