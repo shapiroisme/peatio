@@ -21,10 +21,12 @@ module Peatio
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
 
-    config.i18n.enforce_available_locales = true
+    config.i18n.enforce_available_locales = false
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', 'custom', '*.{yml}')]
+   
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+#old config.i18n.load_path += Dir[Rails.root.join('config', 'locales', 'custom', '*.{yml}')]
     config.i18n.available_locales = ['en', 'zh-CN', 'ru_RU']
 
     config.autoload_paths += %W(#{config.root}/lib #{config.root}/lib/extras)
